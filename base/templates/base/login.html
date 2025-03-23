@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="background-color:  #04152e !important;"  lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns content towards the top */
+    height: 100vh;
+    background-color: #f5e6d9;
+    font-family: Arial, sans-serif;
+    padding-top: 50px; /* Moves content up */
+}
+
+.login-container {
+    width: 60%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin: 6px 0; /* Reduced space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    width: 35%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px; /* Slightly reduced */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px; /* Reduced spacing */
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body style="background-color:  #04152e !important;" >
+<div class="login-container">
+    <h2>Login</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: rgb(19, 86, 157);">{{ message }}</p>
+        {% endfor %}
+    {% endif %} 
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+</div>

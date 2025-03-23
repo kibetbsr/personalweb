@@ -1,0 +1,95 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html style="background-color:  #04152e !important;" lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myweb</title>
+
+    
+        
+        
+        
+</head>
+<body style="background-color:  #04152e !important;">
+    
+    <nav>
+        <ul class="menu">
+            <div class="menu-left">
+                <li class="menu-item"><a class="menu-link" href="{% url 'home' %}">Home</a></li>
+                <li class="menu-item"><a class="menu-link" href="{% url 'news' %}">Tate</a></li>
+            </div>
+            <li class="menu-item menu-right"> <a class="menu-link" href="{% url 'laws' %}">Laws</a></li>
+        </ul>
+    </nav>
+   
+    <div style="position: absolute;
+    top: 100px !important;
+    left: 70px;
+    width: 90%;" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="hero-section">
+                    <h1>Revolutionizing <span class="highlight">Software <br></span> Security with <span class="highlight">AI</span></h1>
+                    <p> Cipher AI combines artificial intelligence with cybersecurity to prevent breaches, mitigate threats, and strengthen software defenses across industries.</p>
+                </div>        
+            </div>
+            <div class="col-md-4">
+                <div class="hero-section">
+                    <h2 style="font-weight: bold;">Make <span class="highlight">Payment</span></h2> <br><br>
+                        <a href="#" class="icon-link">
+                        <i class="fa-brands fa-paypal"></i> PayPal
+                        </a>
+
+                        <a href="#" class="mpesa">
+                            <img id="mpesa-logo" src="{% static 'images/mpesa.png' %}" alt="M-Pesa" style="width: 40px; cursor: pointer;">
+                        </a>
+
+                </div>        
+            </div>
+        </div>
+        
+
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mpesa-logo").click(function(){
+                $.ajax({
+                    url: "{% url 'stk_push' %}",  // Django URL for STK Push
+                    type: "GET",
+                    success: function(response) {
+                        alert("STK Push initiated. Check your phone!");
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Error initiating STK Push: " + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+  
+        
+       
+        
+</body>
+</html>

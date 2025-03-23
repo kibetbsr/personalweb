@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="background-color:  #04152e !important;" lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48 laws </title>
+</head>
+<body style="background-color:  #04152e !important;">
+    <style>
+       
+        .law {
+            background: rgb(209, 192, 192);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #333;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .law h2 {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div style="top:20px; left: 80px; position: absolute; color: rgb(10, 194, 240);" class="username">
+        <h2>Welcome, {{user.username}}</h2>
+    </div>
+    {% endif %}
+   
+<div style="position: absolute;
+top: 50px !important;
+left: 70px;
+width: 90%;" class="container">
+
+ <h3 style=" text-align: center!important; margin-bottom: 25px;"><span style="color: rgb(59, 219, 227);">48 Laws of Power-Robert Greene</span>  </h3>
+    <div class="law">
+        <h2>1.</h2>
+        <p>Never Outshine the Master.</p>
+    </div>
+
+    <div class="law">
+        <h2>2.</h2>
+        <p>Never put too much trust in friends, learn how to use enemies.</p>
+    </div>
+
+    <div class="law">
+        <h2>3.</h2>
+        <p>Conceal your intentions.</p>
+    </div>
+
+    <div class="law">
+        <h2>4.</h2>
+        <p>Always say less than necessary.</p>
+    </div>
+
+    <div class="law">
+        <h2>5.</h2>
+        <p>So much depends on reputation – guard it with your life.</p>
+    </div>
+
+    <div class="law">
+        <h2>6.</h2>
+        <p>Court attention at all costs.</p>
+    </div>
+
+    <div class="law">
+        <h2>7.</h2>
+        <p>Get others to do the work for you, but always take the credit.</p>
+    </div>
+
+    <div class="law">
+        <h2>8.</h2>
+        <p>Make other people come to you – use bait if necessary.</p>
+    </div>
+
+    <div class="law">
+        <h2>9.</h2>
+        <p>Win through your actions, never through argument.</p>
+    </div>
+
+    <div class="law">
+        <h2>10.</h2>
+        <p>Infection: Avoid the unhappy and unlucky.</p>
+    </div>
+
+    <div class="law">
+        <h2>11.</h2>
+        <p>Learn to keep people dependent on you.</p>
+    </div>
+
+    <div class="law">
+        <h2>12.</h2>
+        <p>Use selective honesty and generosity to disarm your victim.</p>
+    </div>
+
+    <div class="law">
+        <h2>13.</h2>
+        <p>When asking for help, appeal to people’s self-interest, never their mercy or gratitude.</p>
+    </div>
+
+    <div class="law">
+        <h2>14.</h2>
+        <p>Pose as a friend, work as a spy.</p>
+    </div>
+
+    <div class="law">
+        <h2>15.</h2>
+        <p>Crush your enemy totally.</p>
+    </div>
+
+    <div class="law">
+        <h2>16.</h2>
+        <p>Use absence to increase respect and honor.</p>
+    </div>
+
+    <div class="law">
+        <h2>17.</h2>
+        <p>Keep others in suspended terror: Cultivate an air of unpredictability.</p>
+    </div>
+
+    <div class="law">
+        <h2>18.</h2>
+        <p>Do not build fortresses to protect yourself – isolation is dangerous.</p>
+    </div>
+
+    <div class="law">
+        <h2>19.</h2>
+        <p>Know who you’re dealing with – do not offend the wrong person.</p>
+    </div>
+
+    <div class="law">
+        <h2>20.</h2>
+        <p>Do not commit to anyone.</p>
+    </div>
+
+    <div class="law">
+        <h2>21.</h2>
+        <p>Play a sucker to catch a sucker – seem dumber than your mark.</p>
+    </div>
+
+    <div class="law">
+        <h2>22.</h2>
+        <p>Use the surrender tactic: Transform weakness into power.</p>
+    </div>
+
+    <div class="law">
+        <h2>23.</h2>
+        <p>Concentrate your forces.</p>
+    </div>
+
+    <div class="law">
+        <h2>24.</h2>
+        <p>Play the perfect courtier.</p>
+    </div>
+
+    <div class="law">
+        <h2>25.</h2>
+        <p>Recreate yourself.</p>
+    </div>
+
+    <div class="law">
+        <h2>26.</h2>
+        <p>Keep your hands clean.</p>
+    </div>
+
+    <div class="law">
+        <h2>27.</h2>
+        <p>Play on people’s need to believe to create a cult-like following.</p>
+    </div>
+
+    <div class="law">
+        <h2>28.</h2>
+        <p>Enter action with boldness.</p>
+    </div>
+
+    <div class="law">
+        <h2>29.</h2>
+        <p>Plan all the way to the end.</p>
+    </div>
+
+    <div class="law">
+        <h2>30.</h2>
+        <p>Make your accomplishments seem effortless.</p>
+    </div>
+
+    <div class="law">
+        <h2>31.</h2>
+        <p>Control the options: Get others to play with the cards you deal.</p>
+    </div>
+
+    <div class="law">
+        <h2>32.</h2>
+        <p>Play to people’s fantasies.</p>
+    </div>
+
+    <div class="law">
+        <h2>33.</h2>
+        <p>Discover each man’s thumbscrew.</p>
+    </div>
+
+    <div class="law">
+        <h2>34.</h2>
+        <p>Be royal in your own fashion: Act like a king to be treated like one.</p>
+    </div>
+
+    <div class="law">
+        <h2>35.</h2>
+        <p>Master the art of timing.</p>
+    </div>
+
+    <div class="law">
+        <h2>36.</h2>
+        <p>Disdain things you cannot have: Ignoring them is the best revenge.</p>
+    </div>
+
+    <div class="law">
+        <h2>37.</h2>
+        <p>Create compelling spectacles.</p>
+    </div>
+
+    <div class="law">
+        <h2>38.</h2>
+        <p>Think as you like but behave like others.</p>
+    </div>
+
+    <div class="law">
+        <h2>39.</h2>
+        <p>Stir up waters to catch fish.</p>
+    </div>
+
+    <div class="law">
+        <h2>40.</h2>
+        <p>Despise the free lunch.</p>
+    </div>
+
+    <div class="law">
+        <h2>41.</h2>
+        <p>Avoid stepping into a great man's shoes.</p>
+    </div>
+
+    <div class="law">
+        <h2>42.</h2>
+        <p>Strike the shepherd and the sheep will scatter.</p>
+    </div>
+
+    <div class="law">
+        <h2>43.</h2>
+        <p>Work on the hearts and minds of others.</p>
+    </div>
+
+    <div class="law">
+        <h2>44.</h2>
+        <p>Disarm and infuriate with the mirror effect.</p>
+    </div>
+
+    <div class="law">
+        <h2>45.</h2>
+        <p>Preach the need for change, but never reform too much at once.</p>
+    </div>
+
+    <div class="law">
+        <h2>46.</h2>
+        <p>Never appear too perfect.</p>
+    </div>
+
+    <div class="law">
+        <h2>47.</h2>
+        <p>Do not go past the mark you aimed for; in victory, learn when to stop.</p>
+    </div>
+
+    <div class="law">
+        <h2>48.</h2>
+        <p>Assume formlessness.</p>
+    </div>
+</div>
+
+
+
+    
+<script src="script.js"></script>
+</body>
+</html>

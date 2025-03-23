@@ -1,0 +1,344 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myweb</title>
+</head>
+<body>
+   <!-- <h1>hello world</h1>
+    
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile Image">
+       -->
+
+
+       <!-- Navbar -->
+<nav class="navbar navbar-expand-lg  fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="navbar-logo" src="{% static 'images/kibett.logo.png' %}" alt="Logo" height="40">
+        </a>
+        
+        <!-- Navbar Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'news' %}">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'forex' %}">Fx Rates</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Cipher AI</a></li>
+               
+
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+    
+    
+    
+    
+    
+    </div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-3" >
+                <div class="card card-body " style=" border: 2px solid rgb(230, 32, 124)"id="profile-wrapper">
+                    <img class= "placeholder-wave" id="profile-pic" src="{% static 'images/finallogo.jpeg' %}" alt="Profile Image">
+                    <hr>
+                    <h4>Hello, I'm <span id="typing-name">Kibet</span></h4>
+                    <p style=" color: rgb(11, 11, 71);">Greatness Achieved Through Excellence</p>
+                </div>
+                                 
+               
+            </div>
+            <div class="col-md-9">
+                <div class="card card-body">
+                    <Strong style="color: green;">The Journey</Strong>
+                    <hr>
+                    <p>Kibet, a Django dev with a love for building scalable and efficient web applications. I enjoy turning ideas into functional, well-structured solutions using Python (Django) and JavaScript. The journey into web development began with a curiosity for backend systems and how they power modern applications. </p>
+                    <p> Over time, I’ve worked on projects involving REST APIs, database management, authentication systems, and dynamic web apps. I’m always eager to optimize code, improve performance, and learn new technologies that enhance my development workflow. </p>
+                    
+                    <ul class="social-icons">
+                        <li> <a href="https://twitter.com/kibe_t_" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li> <a href="https://www.instagram.com/kibe_t_" target="_blank"><i class="fa-brands fa-instagram"></i></a>  </li>
+                        <li> <a href="https://www.linkedin.com/in/kibet mutai" target="_blank"><i class="fa-brands fa-linkedin"></i> </a></li>
+                        <li> <a href="https://www.facebook.com/kibet mutai" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>  </li>
+                    </ul>
+                    
+                
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body"id="cardone">
+                    <h4 class="mainpoint">
+                        Code, Compile, Conquer: The Infinite Loop of Innovation
+                    </h4>
+                    <p>
+                        
+                Programming is more than just writing code-it’s the art of solving problems, creating solutions, and pushing the boundaries of what technology can do. It’s a language that bridges human ideas with machine execution, allowing us to build everything from simple scripts to complex systems that power the modern world. </p>
+
+                <p>At its core, programming is about logic, creativity, and persistence. It challenges you to think critically, break problems into smaller pieces, and find the most efficient way to get things done. What makes programming exciting is its endless possibilities-there’s always something new to learn, improve, and create. It’s not just a skill; it’s a mindset. Keep building, keep learning, and keep coding! 
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body" id="cardone">
+                    <h4 class="mainpoint">Bits, Bytes, and Brilliance: Crafting the Future One Line at a Time</h4>
+                    <p>Programming is the closest thing we have to modern-day magic-where logic meets creativity and ideas transform into reality. Every function, every algorithm, every meticulously placed semicolon contributes to an ever-expanding digital universe.</p>
+                    <p>It’s a world where problem-solving isn’t just a skill, but an obsession, and debugging feels like detective work in a realm of logic. Whether it's crafting seamless web applications, training AI models, or optimizing system performance, the thrill lies in the endless pursuit of efficiency and elegance. The keyboard is our wand, code is our spell, and innovation is our ultimate quest. </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body" id="cardone">
+                    <h4 class="mainpoint" >Hack the Matrix: The Art of Learning to Code Like a Pro</h4>
+                    <p>Learning to code isn’t just about memorizing syntax-it’s about developing a mindset. Think like a debugger, break problems into smaller chunks, and embrace the errors because every bug is a lesson in disguise. Start with the fundamentals, but don’t just read-build. Code every day, experiment with projects, and challenge yourself with algorithms. </p>
+                    <p>Dive into open-source, reverse-engineer what excites you, and never stop asking "why does this work?" or better yet, "how can I break it?" Surround yourself with code, join developer communities, and keep your terminal warm. The best programmers aren’t the ones who know everything-they’re the ones who never stop learning. </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body" id="cardone">
+                    <h4 class="mainpoint" >Stack Overflow Warrior: The Tech I Wield</h4>
+                    <p>I thrive in the world of backend development, building scalable and efficient applications with Django. Django’s elegance and power make it my go-to framework. On the frontend, I have a solid grasp of core JavaScript, understanding how the DOM works, event handling, and asynchronous programming. While I prefer backend development, I can hold my ground when it comes to making things dynamic and interactive.</p>
+                    <p>I also have experience with intermediate PHP, working with server-side scripting, form handling, and database interactions. While Django is my primary backend framework, PHP gives me the flexibility to work across different web environments.
+
+                        Beyond the syntax, I’m always learning, optimizing, and pushing myself to write cleaner, more efficient code</p>
+                </div>
+            </div>
+        </div> 
+        <br>  
+        
+       
+       
+       
+    
+         
+     </div>
+     <div class="container">
+        <div class="users">
+            <h5 style="color: brown;">Bienvenidos amigos!</h5>
+    
+    <!-- User Message Form -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button  class="btn btn-success" type="submit">Submit</button>
+    </form>
+    <br>
+    
+    
+        </div>
+
+        <div class="container">
+            <h5 style="color: rgb(24, 24, 88);">Messages from Visitors</h5>
+            <a href="{% url 'home' %}#messages-section" class="btn btn-primary position-relative">
+                Inbox
+                {% if new_messages_count > 0 %}
+                    <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+                        {{ new_messages_count }}
+                    </span>
+                {% endif %}
+            </a>
+            
+            
+            <hr>
+            <br>
+            {% if messages %}
+    <div id="messages-section" class="container">
+        <div class="row">
+            {% for message in messages %}
+                <div class="col-md-4 mb-3 d-flex align-items-stretch">  
+                    <div class="card p-3 shadow-sm w-100 d-flex flex-column {% if not message.is_read %}unread{% endif %}"> 
+                        <strong>{{ message.name }}</strong> <br>
+
+                        <a class="eachmessage" href="/message/{{ message.id }}">
+                            <p class="flex-grow-1 {% if not message.is_read %} bold-text {% endif %}" 
+                               style="display: -webkit-box; -webkit-line-clamp: 3; 
+                                      -webkit-box-orient: vertical; overflow: hidden;">
+                                {{ message.message }}
+                            </p>
+                        </a>
+
+                        <small id="timestamp" class="text-muted">
+                            {{ message.created_at|date:"F d, Y h:i A" }}
+                        </small>
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:3 %}
+                    </div><div class="row">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Pagination Links -->
+    <nav>
+        <ul class="pagination pagination-sm justify-content-center">
+            {% if messages.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ messages.previous_page_number }}#messages-section">Previous</a>
+                </li>
+            {% endif %}
+    
+            {% for num in messages.paginator.page_range %}
+                <li class="page-item {% if messages.number == num %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}#messages-section">{{ num }}</a>
+                </li>
+            {% endfor %}
+    
+            {% if messages.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ messages.next_page_number }}#messages-section">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+
+{% else %}
+    <p class="text-center">No messages yet. Be the first to leave one!</p>
+{% endif %}
+
+</div>
+
+<div class="chat-container">
+    <div id="chatbox">
+        <p><strong>AI assistant:</strong> Hello! How can I assist you today?</p>
+        <p id="response"></p> <!-- Response placeholder -->
+    </div>
+    
+    <input style="outline: none; margin-bottom: 10px;" type="text" id="userInput" placeholder="Ask me anything...">  
+    <br> 
+    <button id="aibutton" class="btn btn-info" onclick="sendMessage()">Send</button>
+</div>
+
+
+
+        
+        
+     </div>
+     
+     <!-- Other page content -->
+
+<!-- Apple-style minimal footer -->
+<footer class="apple-footer">
+    <div class="footer-container">
+        <hr>
+        <div class="footer-bottom">
+            <p style="color: coral;" >Copyright &copy;2025 Kibet.M -All rights reserved.</p>
+            <ul class="footer-bottom-links">
+                <ul class="footer-bottom-links">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+        </div>
+    </div>
+</footer>
+
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!--jAVA SCRIPT GFOR THE TYPING AND DELETING IN THE H4 {MY NAMES}-->
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const messages = ["Kibet", "Beast", "Mutai", "AGREY"];
+            const typingText = document.getElementById("typing-name");
+            let messageIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            let typingSpeed = 400;  // ⬅️ Slower typing
+            let deletingSpeed = 100; // ⬅️ Slower deleting
+            let pauseBeforeDelete = 4000; // ⬅️ Pause before deleting
+    
+            function typeEffect() {
+                let currentText = messages[messageIndex];
+    
+                if (isDeleting) {
+                    typingText.textContent = currentText.substring(0, charIndex--);
+                    setTimeout(typeEffect, deletingSpeed);
+                } else {
+                    typingText.textContent = currentText.substring(0, charIndex++);
+                    setTimeout(typeEffect, typingSpeed);
+                }
+    
+                if (!isDeleting && charIndex === currentText.length) {
+                    setTimeout(() => (isDeleting = true), pauseBeforeDelete);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    messageIndex = (messageIndex + 1) % messages.length;
+                }
+            }
+    
+            // Set a fixed width for the typing span to prevent height shifting
+            typingText.style.display = "inline-block";
+            typingText.style.minWidth = "80px";  // Adjust width as needed
+            
+            typeEffect();
+        });
+    </script>
+    
+
+    <!--JAVASCRIPT CODE OF tTHE AI BOT-->
+
+    <!--<script>
+        function sendMessage() {
+            let userInput = document.getElementById("userInput").value.trim();
+    
+            if (!userInput) {
+                alert("Please enter a message.");
+                return;
+            }
+    
+            console.log("Sending:", userInput);
+    
+            fetch("/chatbot/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response:", data);
+                document.getElementById("response").innerText = data.reply || "No response received.";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("response").innerText = "Error connecting to AI.";
+            });
+        }
+    </script> -->
+    
+        
+    
+        
+
+
+    
+     
+</body>
+</html>

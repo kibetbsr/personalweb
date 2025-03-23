@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Exchange Rates</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+</head>
+<style>
+    #chart-container {
+        width: 70%;  /* Adjust width as needed */
+        max-width: 800px; /* Prevents it from getting too big */
+        margin: auto; /* Centers the chart */
+    }
+    .ops{
+        width: 30%;
+        outline: none;
+    }
+
+    canvas {
+        display: block;
+    }
+    h1{
+        text-align: center;
+        color: rosybrown;
+    }
+    body { font-family: Arial, sans-serif; text-align: center; }
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    select { width: 100%; padding: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #f4f4f4; }
+</style>
+
+<body>
+    <div class="container">
+        <h1 >Forex Exchange Rates (USD Base)</h1> <br>
+
+    {% if rates.error %}
+        <p style="color: red;">{{ rates.error }}</p>
+    {% else %}
+    <div id="chart-container">
+        <canvas id="forexChart"></canvas>
+    </div>
+    
+    {% endif %}
+    <hr> <hr>
+
+   
+   
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ensure rates are passed safely as JSON
+            const rates = JSON.parse('{{ rates|safe }}');  
+ // Use escapejs to safely pass JSON
+ // Convert Django data to JavaScript object
+            
+            // Extract currency names and values correctly
+            const currencies = Object.keys(rates); // ["USDEUR", "USDGBP", ...]
+            const exchangeRates = Object.values(rates); // [1.08, 0.85, ...]
+            console.log("Django Rates JSON Output:", '{{ rates|escapejs }}');
+
+            if (!exchangeRates.length) {
+                console.error("Exchange rates data is empty!");
+                return;
+            }
+
+            const ctx = document.getElementById('forexChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: currencies,
+                    datasets: [{
+                        label: 'Exchange Rates (1 USD to Other Currencies)',
+                        data: exchangeRates,
+                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: { beginAtZero: false }
+                    }
+                }
+            });
+        });
+    </script>
+
+    
+</body>
+
+
+</html>
