@@ -302,3 +302,6 @@ def logout_view(request):
 
 def about_view(request):
     return render(request, "base/about.html")  # Ensure correct pat
+
+def education_view(request):
+    return render(request, 'base/education.html')

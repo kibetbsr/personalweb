@@ -3,7 +3,7 @@ from . import views
 from .views import home, get_news 
 from .views import process_payment  # Import the view
 from .views import laws_view 
-from .views import signup_view, login_view, logout_view, about_view
+from .views import signup_view, login_view, logout_view, about_view, education_view
 
 
 
@@ -27,6 +27,7 @@ urlpatterns = [
     path("signup/", signup_view, name="signup"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
+    path('education/', views.education_view, name='education'),
 
   #  path('api', include(router.urls)), 
     

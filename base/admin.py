@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import GuestEntry
+from django.contrib.auth.models import User
+from django.contrib.admin.models import LogEntry
 
 
 
@@ -14,3 +16,9 @@ admin.site.site_header = "Admin Panel"
 admin.site.site_title = "Message Management"
 admin.site.index_title = "Manage Guest Messages"
 
+
+
+@admin.register(LogEntry)
+class LogEntryAdmin(admin.ModelAdmin):
+
+    list_display = ('user', 'action_time', 'content_type', 'object_repr', 'change_message')

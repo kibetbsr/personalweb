@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html style="background-color:  #04152e !important;" lang="en">
 <head>
     <meta charset="UTF-8">
    
@@ -9,13 +9,12 @@
 
     <style>
         body{
-            background-color:  #F5EBE1 !important;;
+            background-color:  #04152e !important;
         }
         .header{
             height: 100px;
-            border: 0.5px solid coral;
-            border-radius: 7px;
-            align-items: center;
+            border: none;
+            
             text-align: center;
             color: white; /* Text color for contrast */
             font-weight: bold;
@@ -23,13 +22,13 @@
             padding: 2px;
             font-size: 40px;
             text-align: center;
-            background: white;
-            box-shadow: 0 0 1px 1px rgb(51, 83, 107);
-            background-color:rgb(100, 96, 105);
             display: flex;
             justify-content: center;
             align-items: center;
                     height: 90px; /* Keeps header height fixed */
+        }
+        header h4{
+            align-items: center;
         }
         .search-container {
             text-align: center;
@@ -64,22 +63,24 @@
         
     </style>
 </head>
-<body>
+<body style="background-color:  #04152e !important;">
     <div class="content-box">
-
-
-    <div class="header">
+        <div class="h2-reset">
+            <a class="btn btn-primary btn-sm" href="{% url 'home' %}" 
+               style="display: inline-block; background-color: rgb(69, 162, 69); 
+                      color: white; font-weight: normal; padding: 10px 20px; 
+                      border-radius: 5px; text-decoration: none; text-align: center; 
+                      transition: 0.3s; position: relative; left: 5px; top: 65px;">
+                Home
+            </a>
+        </div>
+        
+        </div>
+    <div style="background-color:  #04152e !important;" class="header">
     
-        <h4>Latest news</h4>
+        <h4>News</h4>
     </div> <br>
-    <div class="h2-reset">
-        <a class="btn btn-primary btn-sm" href="{% url 'home' %}" 
-        style="display: inline-block; background-color: rgb(69, 162, 69); color: white; 
-                font-weight: bold; padding: 10px 20px; border-radius: 5px; 
-                text-decoration: none; text-align: center; transition: 0.3s;">
-            Home
-        </a>
-    </div>
+   
     <!-- Search Bar -->
      <!-- Search Form -->
      <div class="search-container">
@@ -99,7 +100,7 @@
             No results found for "<strong>{{ search_query }}</strong>".
         </p>
     {% endif %}
-{% endif %}
+    {% endif %}
 
 {% for article in articles %}
     <div class="card">
